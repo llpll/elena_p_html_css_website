@@ -1,0 +1,48 @@
+
+.connect {
+    margin: 32px 0px 56px 0px;
+}
+
+.connect h5 {
+    color: #E6641F;
+}
+
+.connect p {
+    display: none;
+}
+
+.register-form h5 {
+    color: #E6641F;
+}
+
+.register-form h3 {
+    display: none;
+}
+
+.register-form label {
+    color: #1D2F48;
+}
+
+.register-form input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #1D2F48;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: solid 1px lightgray;
+    width: 100%;
+}
+
+.action h2 span {
+    color: #E6641F;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.form-calculator p {
+    padding-bottom: 24px;
+}
+
+.register-form a {
+    margin-top: 8px;
+}

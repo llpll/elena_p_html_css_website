@@ -1,0 +1,118 @@
+
+
+.training-format {
+    margin: 8px 0px 32px 0px;
+}
+.included {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 24px;
+}
+
+
+.included img{
+    max-width: 40px;
+    max-height: 40px;
+    padding-right: 16px;
+}
+
+.item-description {
+    margin-top: 0px;
+}
+
+.no-included {
+    font-size: 32px;
+    font-weight: 700;
+    padding-right: 8px;
+    margin-top: 0px;
+} 
+
+.item p, h5 {
+    display: inline;
+}
+
+.cta-viewer-training {
+    margin-top: 56px;
+}
+
+.more-training-options {
+    margin: 56px 0px;
+}
+
+.more-training-options img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.more-training-options div {
+    padding-bottom: 32px;
+}
+
+.strategic-team {
+    background-color: #1D2F48;
+    padding: 56px 0px;
+    margin: 0px 0px 56px 0px;
+}
+
+.strategic-team h2 {
+    margin-bottom: 56px;
+}
+
+.strategic-team h2, label, input {
+    color: white;
+}
+
+.combined-training h4 {
+    color: white;
+}
+
+.combined-training {
+    padding-bottom: 32px;
+}
+
+.combined-training img {
+    padding-top: 16px;
+}
+
+.calculator h5 {
+    color: #E6641F;
+}
+
+.calculator label {
+    color: white;
+}
+
+.calculator input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #1D2F48;
+    border: solid 1px #DBDBDB;
+}
+
+.questions {
+    margin-bottom: 72px;
+}
+
+.questions div {
+    margin: 24px 0px;
+}
+
+.questions p {
+    margin-top: 8px;
+}
+
+.usp {
+    margin: 32px 0px 100px 0px;
+}
+
+.usp img {
+    padding: 24px 0px;
+}
+
+
+/* Media queries */
+
+
