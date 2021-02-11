@@ -46,3 +46,35 @@
 .register-form a {
     margin-top: 8px;
 }
+
+
+/* Media queries */
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+
+.contact-grid {
+    margin: 56px 0px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 24px;
+}
+
+.connect {
+    grid-column: 1 / span 4;
+    margin: 0px;
+}
+
+.register-form {
+    grid-column: 5 / -1;
+}
+
+.form-calculator input {
+    max-width: 100px;
+}
+
+.contact-details input {
+    max-width: 450px;
+}
+}

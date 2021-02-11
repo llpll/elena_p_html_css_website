@@ -1,49 +1,55 @@
 
 /* background, buttons, hero, menu */
 
-
-body {
+.page {
     color: #1D2F48;
     width: 90%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 150px auto 300px;
+    /* grid-template-rows: 150px repeat(10, 1fr) 300px; */
     grid-column-gap: 24px;
-    grid-template-areas: 
-        "h h h h" 
-        "b b b b "
-        "f f f f";
 }
+
 
 /* header, main {
     margin: 0px 20px;
 } */
 
 header {
-    grid-area: h;
-    /* grid-row: 1 / span 1; */
     grid-column: 1 / span 8;
     padding: 20px 0px;
 }
 
 main {
-    grid-area: b;
-    /* grid-column: 1 / span 4; */
-    /* grid-row: 2 / span 1; */
-    grid-column: span 8;
+    grid-column: 1/ -1;
 }
 
 .hero {
-    margin: 56px 0px;
+    margin: 56px 0px;  
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 24px;
+}
+
+.hero h1 {
+    grid-column: 1/ span 8;
+}
+
+.hero p {
+    grid-column: 1/ span 8;
+}
+
+.hero div {
+    grid-column: span 4;
 }
 
 nav {
+    grid-column: 1 / span 8;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-
 }
 
 ul#main-menu {
@@ -52,6 +58,7 @@ ul#main-menu {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    flex-shrink: none;
     order: 3;
 }
 
@@ -189,6 +196,7 @@ blockquote {
     font-weight: 400;
     line-height: 1.4em;
     margin: 0px;
+    padding-bottom: 24px;
 }
 
 li {
@@ -213,20 +221,20 @@ label {
 /* footer */
 footer {
     background-color: #1D2F48;
-    margin: 72px 0px 0px 0px;
+    margin: 72px 0px 0px;
     padding: 30px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    grid-area: f;
-    /* grid-column: 1 / span 4; */
-    /* grid-row: 3 / span 1; */
     grid-column: span 8;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 24px;
 }
 
 ul#footer-menu {
     padding: 0px;
-    order: 1;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1 ;
+    
 }
 
 ul#footer-menu li {
@@ -243,7 +251,8 @@ ul#footer-menu li a {
 
 ul#footer-links {
     padding: 0px;
-    order: 2;
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 1 ;
 }
 
 ul#footer-links li {
@@ -268,9 +277,9 @@ ul#footer-links li a {
 }
 
 .subscribe-newsletter{
-    order: 3;
     padding-top: 20px;
-    /* width: 100%; */
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1 ;
 }
 
 .subscribe-newsletter input {
@@ -283,6 +292,11 @@ ul#footer-links li a {
     border-bottom: solid 3px white;
 }
 
+/* .input-mail {
+    min-width: 300px;
+} */
+
+
 input.footer-btn {
     background-color:#1D2F48;
     font-size: 16px;
@@ -291,69 +305,80 @@ input.footer-btn {
     display: block;
 }
 
-
-
 /* Media queries */
 
-@media (min-width: 1024px) {
+@media (min-width: 776px) {
 
-    nav {
-        display: flex;
-        flex-wrap: nowrap;
-        /* width: 100%;
-        align-content: center;
-        justify-content: space-between; */
+    /* Media 776 typography */
     
-    }
-
-    ul#main-menu {
-        order: 2;
-        /* width: 50%; */
-        align-self: center;
-        /* padding: 20px 56px; */
-        /* flex-shrink: 1; */
-    }
+        h1 {
+            font-size: 54px;
+        }
     
-    .contact-btn {
-        order: 3;
-        justify-self: flex-end;
-        margin: 0px;
-        align-self: center;
-        /* flex-shrink: 1; */
+        h2 {
+            font-size: 46px;
+        }
+    
+        h3 {
+            font-size: 34px;
+        }
+    
+        h4 {
+            font-size: 28px;
+        }
+    
+        h5 {
+            font-size: 20px;
+        }
+    
+        p, span, li {
+            font-size: 20px;
+        }
+    
+        blockquote {
+            font-size: 24px;
+        } 
+    
+        /* tablet all */
+    
+        .hero h1, p {
+            grid-column: 1 / span 7;
+        }
+
+        footer {
+            grid-template-rows: 1fr;
+        }
+    
+        ul#footer-menu {
+            grid-column: 1 / span 2;
+        }
+    
+        ul#footer-links {
+            grid-column: 3 / span 2;
+        }
+    
+        .subscribe-newsletter{
+            padding-top: 24px;
+            grid-column: 5 / span 4;
+            grid-row: 1 / span 1 ;
+        }
+        
     }
 
-    ul#main-menu li a {
-        text-align: center;
-        padding: 0px 32px;
-    }
-
-    .logo {
-        flex-shrink: 0;
-    }
-
-    .col-lg-6 {
-        grid-column: 1 / span 6;
-        background-color: red;
-    }
-}
-
-
-
-/* Media 776px */
-
+/* TABLET */
 @media (min-width: 870px) {
+
 
     nav {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         align-content: center;
-    
     }
 
     ul#main-menu {
         order: 2;
-        width: 50%;
+        /* width: 50%; */
         align-self: center;
         justify-content: center;
         padding: 20px 56px;
@@ -374,44 +399,62 @@ input.footer-btn {
     .logo {
         flex-shrink: 0;
     }
-
-    .col-lg-6 {
+    
+    .hero h1 {
         grid-column: 1 / span 6;
     }
+    
+    .hero p {
+        grid-column: 1 / span 5;
+    }
+
 }
 
-@media (min-width: 776px) {
 
-/* Media 776 typography */
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  
+    .hero {
+        margin: 72px 0px 150px;   
+    }
 
     h1 {
-        font-size: 54px;
+        grid-column: 1 / span 6;
     }
-
-    h2 {
-        font-size: 46px;
-    }
-
-    h3 {
-        font-size: 34px;
-    }
-
-    h4 {
-        font-size: 28px;
-    }
-
-    h5 {
-        font-size: 20px;
-    }
-
-    p, span, li {
-        font-size: 20px;
-    }
-
-    blockquote {
-        font-size: 24px;
-    }
-
     
+    .hero p {
+        grid-column: 1 / span 5;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    ul#main-menu {
+        order: 2;
+        width: 50%;
+        align-self: center;
+        justify-items: center;
+        /* padding: 20px 56px; */
+    }
+    
+    ul#main-menu li a {
+        text-align: center;
+        padding: 0px 32px;
+    }
+
+    .contact-btn {
+        order: 3;
+        justify-self: flex-end;
+        margin: 0px;
+        align-self: center;
+    }
+   
+   
 
 }
+
+
+
