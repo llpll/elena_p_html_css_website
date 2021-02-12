@@ -2,7 +2,7 @@
 
 .img-bckgr {
     min-height: 600px;
-    background: white url(/about-hero.jpg);
+    background: white url(/images/about-hero.jpg);
     background-size: cover;
     background-position: center;
     color: white;

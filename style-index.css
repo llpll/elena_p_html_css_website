@@ -84,7 +84,7 @@ input.secondary-btn  {
 
 .case-study-wide {
     min-height: 400px;
-    background: white url(/case-study-wide.jpg);
+    background: white url(/images/case-study-wide.jpg);
     background-size: cover;
     background-position: center;
     display: grid;
