@@ -11,6 +11,9 @@
     grid-column-gap: 24px;
 }
 
+/* .body {
+    margin: 0px;
+} */
 
 /* header, main {
     margin: 0px 20px;
@@ -24,6 +27,7 @@ header {
 main {
     grid-column: 1/ -1;
 }
+
 
 .hero {
     margin: 56px 0px;  
@@ -120,7 +124,7 @@ a.secondary-btn  {
     color: #E6641F;
     border: solid 2.8px #E6641F;
     padding: 8px 20px; 
-    margin: 24px 0px 0px 0px;
+    margin: 16px 0px 0px;
 }
 
 a.dropdown-btn  {
@@ -219,9 +223,10 @@ label {
 
 
 /* footer */
+
 footer {
     background-color: #1D2F48;
-    margin: 72px 0px 0px;
+    margin-top: 100px;
     padding: 30px 0px;
     grid-column: span 8;
     display: grid;
@@ -234,7 +239,6 @@ ul#footer-menu {
     padding: 0px;
     grid-column: 1 / span 4;
     grid-row: 1 / span 1 ;
-    
 }
 
 ul#footer-menu li {
@@ -278,7 +282,7 @@ ul#footer-links li a {
 
 .subscribe-newsletter{
     padding-top: 20px;
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 8;
     grid-row: 2 / span 1 ;
 }
 
@@ -291,11 +295,11 @@ ul#footer-links li a {
     border: none;
     border-bottom: solid 3px white;
 }
-
-/* .input-mail {
-    min-width: 300px;
+/* 
+input#input-mail {
+    width: 100%;
+    max-width: 400px;
 } */
-
 
 input.footer-btn {
     background-color:#1D2F48;
@@ -307,67 +311,68 @@ input.footer-btn {
 
 /* Media queries */
 
+/* tablet */
+
 @media (min-width: 776px) {
 
-    /* Media 776 typography */
-    
-        h1 {
-            font-size: 54px;
-        }
-    
-        h2 {
-            font-size: 46px;
-        }
-    
-        h3 {
-            font-size: 34px;
-        }
-    
-        h4 {
-            font-size: 28px;
-        }
-    
-        h5 {
-            font-size: 20px;
-        }
-    
-        p, span, li {
-            font-size: 20px;
-        }
-    
-        blockquote {
-            font-size: 24px;
-        } 
-    
-        /* tablet all */
-    
-        .hero h1, p {
-            grid-column: 1 / span 7;
-        }
+/* typography */
 
-        footer {
-            grid-template-rows: 1fr;
-        }
-    
-        ul#footer-menu {
-            grid-column: 1 / span 2;
-        }
-    
-        ul#footer-links {
-            grid-column: 3 / span 2;
-        }
-    
-        .subscribe-newsletter{
-            padding-top: 24px;
-            grid-column: 5 / span 4;
-            grid-row: 1 / span 1 ;
-        }
-        
+    h1 {
+        font-size: 54px;
     }
 
-/* TABLET */
-@media (min-width: 870px) {
+    h2 {
+        font-size: 46px;
+    }
 
+    h3 {
+        font-size: 34px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    p, span, li {
+        font-size: 20px;
+    }
+
+    blockquote {
+        font-size: 24px;
+    } 
+
+
+/* tablet all */
+
+    .hero h1, p {
+        grid-column: 1 / span 7;
+    }
+
+    footer {
+        grid-template-rows: 1fr;
+    }
+
+    ul#footer-menu {
+        grid-column: 1 / span 2;
+    }
+
+    ul#footer-links {
+        grid-column: 3 / span 2;
+    }
+
+    .subscribe-newsletter{
+        padding-top: 24px;
+        grid-column: 5 / span 4;
+        grid-row: 1 / span 1 ;
+    }
+    
+}
+
+@media (min-width: 870px) {
 
     nav {
         display: flex;
@@ -412,7 +417,8 @@ input.footer-btn {
 
 
 
-/* DESKTOP */
+/* desktop */
+
 @media (min-width: 1024px) {
   
     .hero {
@@ -451,8 +457,6 @@ input.footer-btn {
         margin: 0px;
         align-self: center;
     }
-   
-   
 
 }
 

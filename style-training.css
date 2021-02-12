@@ -3,16 +3,30 @@
 .training-format {
     margin: 8px 0px 32px 0px;
 }
+
+.viewer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 24px;
+}
+
+.viewer h2 {
+    border-bottom: 2.8px solid #E6641F;
+    padding-bottom: 8px;
+    color: #E6641F;
+}
+
+.training-intro, .training-format, .prices-dropdown, .cta-viewer-training {
+    grid-column: 1 / span 8;
+}
+
 .included {
-    /* display: flex;
-    flex-wrap: wrap; */
     padding-top: 24px;
 }
 
-
 .included img{
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 30px;
+    max-height: 30px;
     padding-right: 16px;
 }
 
@@ -27,16 +41,23 @@
     margin-top: 0px;
 } 
 
-.item p, h5 {
-    display: inline;
-}
-
 .cta-viewer-training {
     margin-top: 56px;
 }
 
 .more-training-options {
     margin: 56px 0px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 24px;
+}
+
+.player {
+    grid-column: 1 / span 8;
+}
+
+.leader {
+    grid-column: 1 / span 8;
 }
 
 .more-training-options img {
@@ -62,11 +83,21 @@
     color: white;
 }
 
+.combined-training {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 24px;
+}
+
+.combined-training h2, .team-type-1, .team-type-2 {
+    grid-column: 1 /  span 8;
+}
+
 .combined-training h4 {
     color: white;
 }
 
-.combined-training {
+.combined-training  div{
     padding-bottom: 32px;
 }
 
@@ -76,26 +107,36 @@
 
 .calculator h5 {
     color: #E6641F;
+    margin-top: 24px;
 }
 
 .calculator label {
     color: white;
 }
 
+.white-text {
+    color: white;
+}
+
+.field {
+    margin-top: 24px;
+}
+
 .calculator input {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     padding: 8px;
-    margin-bottom: 20px;
     color: white;
     background-color: #1D2F48;
     border: solid 1px #DBDBDB;
+    max-width: 150px;
 }
 
 .q-and-a {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 24px;
+    /* grid-auto-flow: column; */
 }
 
 .questions {
@@ -147,22 +188,98 @@
         grid-column: 5 / span 4;
     }
 
+    .included img {
+        max-width: 5x0px;
+        max-height: 50px;
+     }
+ 
+    .player {
+        grid-column: 1 / span 4;
+    }
     
+    .leader {
+        grid-column: 5 / span 4;
+    }
+
+    .more-training-options {
+        margin: 88px 0px 150px;
+    }
+
+    .training-intro {
+        grid-column: 1 / span 4;
+    }
+    
+    .training-format {
+        grid-column: 5 / span 4;
+        grid-row: 1 / span 3;
+    }
+
+    .included {
+        padding: 0px 0px 24px;
+    }
+    
+    .prices-dropdown {
+        grid-column: 1 / span 4;
+        margin-top: 32px
+    }
+    
+    .cta-viewer-training {
+        grid-column: 1 / span 4;
+    }
+
+    .team-type-1 {
+        grid-column: 1 /  span 4;
+    }
+
+    .team-type-2 {
+        grid-column: 5 /  span 4; 
+    }
+
+    .combined-training div {
+        padding-bottom: 56px;
+    }
+
+   .calc-fields {
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+   .field {
+    padding-right: 16px;
+   }
+
+   .field input {
+       max-width: 100px;
+   }
+
+    .questions {
+        grid-column: 2 / span 6;
+    }
+
+    .q-a-photo {
+        grid-column: 2 / span 6;
+    }
+}
+
+
+/* desktop */
+
+@media (min-width: 1024px) {
+
+    .combined-training h2 {
+        grid-column: 1 / span 4;
+    }
+
     .questions {
         grid-column: 1 / span 4;
     }
 
     .q-a-photo {
-        grid-column: 5 / span 4;
+        grid-column: 6 / span 3;
+        grid-row: 1 / span 2;
     }
-
-    .item-description {
-        margin-left: 76px;
-    }
-
-    .included img {
-       max-width: 60px;
-       max-height: 60px;
+ 
+    .field input {
+        max-width: 150px;
     }
 }
-

@@ -1,14 +1,26 @@
 
 .connect {
-    margin: 32px 0px 56px 0px;
+    margin-bottom: 56px;
 }
 
 .connect h5 {
     color: #E6641F;
+    margin-bottom: 8px;
 }
 
 .connect p {
     display: none;
+}
+
+.contact-grid {
+    margin: 56px 0px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 24px;
+}
+
+.connect, .register-form {
+    grid-column: 1 / span 8;
 }
 
 .register-form h5 {
@@ -50,31 +62,42 @@
 
 /* Media queries */
 
-/* Desktop */
+/* tablet */
+
+@media (min-width: 776px) {
+    .contact-details input {
+        max-width: 450px;
+    }
+
+    .form-calculator input {
+        max-width: 150px; 
+    }
+}
+
+
+/* desktop */
 
 @media (min-width: 1024px) {
 
-.contact-grid {
-    margin: 56px 0px;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-column-gap: 24px;
-}
+    .connect {
+        grid-column: 1 / span 4;
+        margin: 0px;
+    }
 
-.connect {
-    grid-column: 1 / span 4;
-    margin: 0px;
-}
+    .register-form {
+        grid-column: 5 / span 4;
+    }
 
-.register-form {
-    grid-column: 5 / -1;
-}
+    .register-form h3 {
+        display: block;
+    }
 
-.form-calculator input {
-    max-width: 100px;
-}
+    .register-form h5 {
+        margin-bottom: 16px;
+    }
 
-.contact-details input {
-    max-width: 450px;
-}
+    .contact-details input {
+        max-width: 450px;
+    }   
+
 }

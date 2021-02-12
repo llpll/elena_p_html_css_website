@@ -17,7 +17,6 @@
 .instructor {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 24px;
 }
 
@@ -44,12 +43,7 @@
     justify-self: center;
 }
 
-.instructor-photo {
-    grid-column: 1 / span 8;
-    padding-bottom: 32px;
-}
-
-.quote {
+.instructor-photo, .quote {
     grid-column: 1 / span 8;
     margin-bottom: 32px;
 }
@@ -59,7 +53,7 @@
 }
 
 .professional-links {
-    grid-column: span 8;
+    grid-column: 1 / span 8;
 }
 
 .professional-links a {
@@ -72,7 +66,6 @@
     display: block;
 }
 
-
 .training-benefits {
     margin: 72px 0px;
     display: grid;
@@ -81,13 +74,13 @@
 }
 
 .intro-benefits {
-    grid-column: span 8;
+    grid-column: 1 / span 8;
 }
 
 .checkbox-benefits {
     margin-top: 32px;
     margin-bottom: 16px;
-    grid-column: span 8;
+    grid-column: 1 / span 8;
 }
 
 .benefit p {
@@ -105,7 +98,7 @@
 
 .cta-benefits {
     margin: 32px 0px 72px 0px;
-    grid-column: span 8;
+    grid-column: 1 / span 8;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -144,14 +137,13 @@
     margin-bottom: 24px;
 }
 
-
-
 .case-studies-nav {
     padding-top: 24px;
     grid-column: 1 / span 8;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: center;
 } 
 
 .case-number {
@@ -171,7 +163,7 @@
 
 .case-studies-nav p {
     margin: 0px;
-    line-height: 2em;
+    line-height: 3.0em;
 }
 
 .case-number p, a {
@@ -186,6 +178,14 @@ img.case-study {
 
 
 /* Media queries */
+
+/* phone*/
+@media (min-width: 375px) {
+    .case-studies-nav h5 {
+        margin-bottom: 0px;
+    }
+}
+
 /* tablet */
 @media (min-width: 776px) {
 
@@ -205,124 +205,107 @@ img.case-study {
     .case-study-card img {
         width: 50%;
         align-self: self-start;
+        margin: 0px;
     }
     
     .case-study-card div {
         width: 45%;
     }
 
-    .case-studies-nav {
-        justify-content: flex-end;
+    .case-studies-nav a {
+        align-self: center;
     }
 
-    .case-studies-nav h5 {
-        padding-right: 32px;
-        margin: 0px;
-    }
-    
 }
 
 
 /* desktop */
 @media (min-width: 1024px) {
 
-.hero a {
-    grid-column-start: 1;
-}
-
-.bio {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 1;
-}
-
-.logos {
-    grid-column: 1/ span 4;
-    grid-row: 2 / span 1;
-    align-self: center;
-    justify-content: flex-start;
-}
-
-.logos img {
-    padding: 0px 56px 56px 0px;
-}
-
-.instructor-photo {
-    grid-column: 5 / span 4;
-    grid-row: 1 / span 2;
-    margin-bottom: 56px;
-}
-
-.quote {
-    grid-row: 3 / span 1;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-column-gap: 24px;
-}
-
-.quote img {
-    display: block;
-    grid-column: 1 / span 2;
-}
-
-.quote div {
-    grid-column: 3 / span 6;
-}
-
-.professional-links {
-    grid-column: 1/ span 8;
-    grid-row: 4 / span 1;
-}
-
-.professional-links a {
-    display: inline;
-}
-
-
-.training-benefits {
-    margin: 150px 0px;
-}
-
-.intro-benefits {
-    grid-column: 1 / span 4;
-}
-
-.checkbox-benefits {
-    margin-top: 32px;
-    margin-bottom: 16px;
-    grid-column: 1 / span 4;
-}
-
-.cta-benefits {
-    grid-column: 6 / span 3;
-}
-
-.case-studies h2 {
-    grid-column: 1 / span 4;
-}
-
-.case-study-card {
-    margin-top: 24px;
-    grid-column: 1 / span 8;
-}
-
-.case-studies-nav {
-    padding-top: 24px;
-    grid-column: 5 / span 4;
-    justify-self: flex-end;
-}
-
-.case-studies-nav h5 {
-    margin: 0px;
-}
-
-}
-
-
-@media (min-width: 1224px) {
-    .case-studies-nav {
-        padding-top: 24px;
-        grid-column: 6 / span 4;
+    .hero a {
+        grid-column-start: 1;
     }
 
+    .bio {
+        grid-column: 1 / span 4;
+    }
+
+    .logos {
+        grid-column: 1/ span 4;
+        align-self: center;
+        justify-content: flex-start;
+    }
+
+    .logos img {
+        padding: 0px 56px 56px 0px;
+    }
+
+    .instructor-photo {
+        grid-column: 5 / span 4;
+        grid-row: 1 / span 2;
+        margin-bottom: 56px;
+    }
+
+    .quote {
+        grid-row: 3 / span 1;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: 24px;
+    }
+
+    .quote img {
+        display: block;
+        grid-column: 1 / span 2;
+    }
+
+    .quote div {
+        grid-column: 3 / span 6;
+    }
+
+    .professional-links {
+        grid-column: 1/ span 8;
+    }
+
+    .professional-links a {
+        display: inline;
+    }
+
+    .training-benefits {
+        margin: 150px 0px;
+    }
+
+    .intro-benefits {
+        grid-column: 1 / span 4;
+    }
+
+    .checkbox-benefits {
+        margin-top: 32px;
+        margin-bottom: 16px;
+        grid-column: 1 / span 4;
+    }
+
+    .cta-benefits {
+        grid-column: 6 / span 3;
+    }
+
+    .case-studies h2 {
+        grid-column: 1 / span 4;
+    }
+
+    .case-study-card {
+        margin-top: 24px;
+        grid-column: 1 / span 8;
+    }
+
+    .case-studies-nav {
+        padding-top: 0px;
+        grid-column: 5 / span 4;
+        justify-self: flex-end;
+    }
+
+    .case-studies-nav h5 {
+        margin: 0px;
+        padding-right: 32px;
+    }
 
 }
