@@ -1,10 +1,12 @@
 
-
-.img-bckgr {
-    min-height: 600px;
+.full-width-hero {
     background: white url(/images/about-hero.jpg);
     background-size: cover;
     background-position: center;
+}
+
+.img-bckgr {
+    min-height: 800px;
     color: white;
     align-content: center;
     }

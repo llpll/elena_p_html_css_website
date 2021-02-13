@@ -87,9 +87,9 @@ input.secondary-btn  {
     /* min-width: 1400px; */
     
     justify-self: center;
-    background: white url(/images/case-study-wide.jpg);
+    /* background: white url(/images/case-study-wide.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 24px;

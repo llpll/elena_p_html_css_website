@@ -12,9 +12,20 @@
     justify-content: center; */
 }
 
-/* .body {
-    margin: 0px;
-} */
+.full-width {
+    background-color: #1D2F48;
+} 
+
+.full-width-case-study {
+    background: white url(/images/case-study-wide.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+body {
+    margin: 0;
+}
 
 /* header, main {
     margin: 0px 20px;
@@ -49,7 +60,7 @@ img {
 }
 
 .hero div {
-    grid-column: span 4;
+    grid-column: span 8;
 }
 
 
