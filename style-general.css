@@ -5,9 +5,9 @@
     color: #1D2F48;
     width: 90%;
     margin: auto;
+    padding: 0px 24px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    /* grid-template-rows: 150px repeat(10, 1fr) 300px; */
     grid-column-gap: 24px;
 }
 
@@ -20,12 +20,11 @@
 } */
 
 header {
-    grid-column: 1 / span 8;
     padding: 20px 0px;
 }
 
-main {
-    grid-column: 1/ -1;
+main, header {
+    grid-column: 1 / span 8 ;
 }
 
 img {
@@ -299,7 +298,7 @@ ul#footer-links li a {
     margin-bottom: 20px;
     color: white;
     border: none;
-    border-bottom: solid 3px white;
+    border-bottom: solid 2.8px white;
 }
 /* 
 input#input-mail {
@@ -375,7 +374,6 @@ input.footer-btn {
         grid-column: 5 / span 4;
         grid-row: 1 / span 1 ;
     }
-    
 
     nav {
         display: flex;
@@ -411,7 +409,6 @@ input.footer-btn {
 }
 
 @media (min-width: 870px) {
-
     
     .hero h1 {
         grid-column: 1 / span 6;
@@ -420,7 +417,6 @@ input.footer-btn {
     .hero p {
         grid-column: 1 / span 5;
     }
-
 }
 
 
@@ -444,18 +440,6 @@ input.footer-btn {
     ul#main-menu {
         padding: 20px 72px;
     }
-    
-    ul#main-menu li a {
-        text-align: center;
-        padding: 0px 32px;
-    }
-
-    .contact-btn {
-        order: 3;
-        justify-self: flex-end;
-        margin: 0px;
-        align-self: center;
-    }
 
 }
 
@@ -464,6 +448,7 @@ input.footer-btn {
     ul#main-menu {
         padding: 20px 100px;
     }
+
 }
 
 
