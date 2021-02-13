@@ -84,6 +84,9 @@ input.secondary-btn  {
 
 .case-study-wide {
     min-height: 400px;
+    /* min-width: 1400px; */
+    
+    justify-self: center;
     background: white url(/images/case-study-wide.jpg);
     background-size: cover;
     background-position: center;

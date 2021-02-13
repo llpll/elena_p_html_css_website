@@ -3,12 +3,13 @@
 
 .page {
     color: #1D2F48;
-    width: 90%;
-    margin: auto;
-    padding: 0px 24px;
-    display: grid;
+    max-width: 1200px;
+    margin: 0 auto ;
+    padding: 0px 32px;
+    /* display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 24px;
+    justify-content: center; */
 }
 
 /* .body {
@@ -23,9 +24,9 @@ header {
     padding: 20px 0px;
 }
 
-main, header {
+/* main, header {
     grid-column: 1 / span 8 ;
-}
+} */
 
 img {
     max-width: 100%;
@@ -233,7 +234,7 @@ footer {
     background-color: #1D2F48;
     margin-top: 100px;
     padding: 30px 0px;
-    grid-column: span 8;
+    /* grid-column: span 8; */
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 1fr);
