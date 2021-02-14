@@ -258,11 +258,11 @@ ul#footer-menu {
     grid-row: 1 / span 1 ;
 }
 
-ul#footer-menu li {
+ul#footer-menu li, ul#footer-links li  {
     list-style-type: none;
 }
 
-ul#footer-menu li a {
+ul#footer-menu li a, ul#footer-links li a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -274,18 +274,6 @@ ul#footer-links {
     padding: 0px;
     grid-column: 5 / span 4;
     grid-row: 1 / span 1 ;
-}
-
-ul#footer-links li {
-    list-style-type: none;
-}
-
-ul#footer-links li a {
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
 }
 
 .subscribe-newsletter label{
@@ -312,11 +300,11 @@ ul#footer-links li a {
     border: none;
     border-bottom: solid 2.8px white;
 }
-/* 
+
 input#input-mail {
     width: 100%;
     max-width: 400px;
-} */
+}
 
 input.footer-btn {
     background-color:#1D2F48;
