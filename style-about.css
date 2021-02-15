@@ -6,9 +6,9 @@
 }
 
 .img-bckgr {
-    min-height: 800px;
     color: white;
     align-content: center;
+    min-height: 500px;
     }
 
 .img-bckgr p {
@@ -40,7 +40,7 @@
 }
 
 .logos img {
-    padding: 16px 24px;
+    padding: 16px 8px;
     align-self: center;
     justify-self: center;
 }
@@ -155,6 +155,7 @@
 
 .case-studies-nav h5 {
     margin-bottom: 16px;
+    padding-right: 32px;
     align-self: center;
 }
 
@@ -181,15 +182,20 @@ img.case-study {
 
 /* Media queries */
 
-/* phone*/
-@media (min-width: 375px) {
-    .case-studies-nav h5 {
-        margin-bottom: 0px;
-    }
-}
-
 /* tablet */
+
+@media (min-width: 670px) {
+
+    .cta-benefits h3 {
+     padding-right: 200px;
+    }
+}       
+
 @media (min-width: 768px) {
+
+    .img-bckgr {
+        min-height: 600px;
+    }
 
     .instructor-photo {
         justify-self: center;
@@ -198,6 +204,10 @@ img.case-study {
 
     .logos {
         justify-content: space-around;
+    }
+
+    .logos img {
+        padding: 16px 32px;
     }
 
     .case-studies h2 {
@@ -212,6 +222,11 @@ img.case-study {
     
     .case-study-card div {
         width: 45%;
+    }
+
+    .case-studies-nav h5 {
+        align-self: center;
+        margin: 0px;
     }
 
     .case-studies-nav a {
@@ -290,6 +305,10 @@ img.case-study {
         grid-column: 6 / span 3;
     }
 
+    .cta-benefits h3 {
+        padding-right: 0px;
+       }
+
     .case-studies h2 {
         grid-column: 1 / span 4;
     }
@@ -303,11 +322,6 @@ img.case-study {
         padding-top: 0px;
         grid-column: 5 / span 4;
         justify-self: flex-end;
-    }
-
-    .case-studies-nav h5 {
-        margin: 0px;
-        padding-right: 32px;
     }
 
 }
