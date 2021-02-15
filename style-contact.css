@@ -64,7 +64,8 @@
 
 /* tablet */
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
+    
     .contact-details input {
         max-width: 450px;
     }

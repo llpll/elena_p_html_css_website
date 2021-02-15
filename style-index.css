@@ -69,6 +69,7 @@
     color: white;
     border: none;
     border-bottom: solid 2.8px #1D2F48;
+    max-width: 450px;
     width: 100%;
 }
 
@@ -147,11 +148,6 @@
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-column-gap: 24px;
-    }
-
-    .retention-input {
-        max-width: 450px;
-        margin-top: 24px;
     }
 
     .mail-me {

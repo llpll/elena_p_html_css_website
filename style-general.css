@@ -5,7 +5,7 @@
     color: #1D2F48;
     max-width: 1200px;
     margin: 0 auto ;
-    padding: 0px 32px;
+    padding: 0px 24px;
 }
 
 .full-width {
@@ -330,6 +330,10 @@ ul#footer-menu li a, ul#footer-links li a {
 
 /* tablet all */
 
+    .page {
+        padding: 0px 48px;
+    }
+    
     .hero h1, p {
         grid-column: 1 / span 7;
     }
