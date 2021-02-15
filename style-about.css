@@ -189,7 +189,7 @@ img.case-study {
 }
 
 /* tablet */
-@media (min-width: 776px) {
+@media (min-width: 768px) {
 
     .instructor-photo {
         justify-self: center;

@@ -15,16 +15,16 @@
     grid-column: span 8;
 }
 
+.intro {
+    margin-bottom: 56px;
+}
+
 .intro ul {
     padding-left: 20px;
 }
 
 .intro ul li {
     font-weight: 300;
-}
-
-.intro {
-    margin-bottom: 56px;
 }
 
 .testimonials {
@@ -58,17 +58,11 @@
     line-height: 2em;
 }
 
-input.secondary-btn  {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #E6641F;
-    background-color: white;
-    border: solid 2.8px #E6641F;
-    padding: 8px 20px; 
+.retention-input {
+    margin-top: 32px;
 }
 
-.text-input input {
+.retention-input input {
     font-family:'Roboto', sans-serif;
     padding: 12px 0px;
     margin-bottom: 20px;
@@ -78,30 +72,28 @@ input.secondary-btn  {
     width: 100%;
 }
 
-.case-study {
+.full-width-case-study {
+    background: white url(/images/case-study-wide.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
     margin: 56px 0px;
 }
 
-.case-study-wide {
-    min-height: 400px;
-    /* min-width: 1400px; */
-    
-    justify-self: center;
-    /* background: white url(/images/case-study-wide.jpg);
-    background-size: cover;
-    background-position: center; */
+.case-study {
+    padding-top: 56px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 24px;
     align-content: center;
 }
 
-.case-study-wide h2 {
+.case-study h2 {
     grid-column: 1 / span 8;
     color: white;
 }
 
-.case-study-wide div {
+.case-study div {
     grid-column: 1 / span 8;
 }
 
@@ -110,17 +102,7 @@ input.secondary-btn  {
 }
 
 
-
 /* Media queries */
-
-/* tablet */
-
-@media (min-width: 776px) {
-
-    .case-study-wide h2 {
-        grid-column: 1 / span 6;
-    }
-}
 
 /* desktop */
 
@@ -148,11 +130,16 @@ input.secondary-btn  {
         grid-column: 3 / span 6;
     }
 
-    .case-study-wide {
-        padding: 56px 0px;
+    .full-width-case-study {
+        min-height: 600px;
+        margin: 100px 0px;
     }
 
-    .case-study-wide h2 {
+    .case-study {
+        padding: 100px 0px;
+    }
+
+    .case-study h2 {
         grid-column: 1 / span 6;
     }
 
@@ -162,14 +149,14 @@ input.secondary-btn  {
         grid-column-gap: 24px;
     }
 
-    .mail-me {
-        grid-column: 1 / span 4;
-    }
-
-    .text-input {
+    .retention-input {
         max-width: 450px;
         margin-top: 24px;
     }
+
+    .mail-me {
+        grid-column: 1 / span 4;
+    }   
 
     .registration-cta {
         margin: 0px;

@@ -136,7 +136,6 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 24px;
-    /* grid-auto-flow: column; */
 }
 
 .questions {
@@ -176,9 +175,15 @@
 }
 
 
-
 /* Media queries */
-@media (min-width: 776px) {
+
+/* tablet */
+
+@media (min-width: 768px) {
+
+    .usp {
+        margin: 72px 0px 100px;
+    }
 
     .usp-1 {
         grid-column: 1 / span 4;
@@ -277,6 +282,10 @@
     .q-a-photo {
         grid-column: 6 / span 3;
         grid-row: 1 / span 2;
+    }
+
+    .usp {
+        margin-bottom: 150px;
     }
  
     .field input {
